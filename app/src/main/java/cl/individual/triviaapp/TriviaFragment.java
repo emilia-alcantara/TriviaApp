@@ -8,12 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import cl.individual.triviaapp.databinding.FragmentTriviaBinding;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link TriviaFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class TriviaFragment extends Fragment {
+    private FragmentTriviaBinding binding;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -58,7 +61,12 @@ public class TriviaFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_trivia, container, false);
+        binding = FragmentTriviaBinding.inflate(getLayoutInflater(), container, false);
+        initListeners();
+        return binding.getRoot();
+    }
+
+    private void initListeners() {
+
     }
 }

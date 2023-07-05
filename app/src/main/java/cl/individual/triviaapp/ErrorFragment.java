@@ -8,12 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import cl.individual.triviaapp.databinding.FragmentErrorBinding;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ErrorFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class ErrorFragment extends Fragment {
+    private FragmentErrorBinding binding;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -58,7 +61,12 @@ public class ErrorFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_error, container, false);
+        binding = FragmentErrorBinding.inflate(getLayoutInflater(), container, false);
+        initListeners();
+        return binding.getRoot();
+    }
+
+    private void initListeners() {
+
     }
 }
