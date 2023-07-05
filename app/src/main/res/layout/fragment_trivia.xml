@@ -8,17 +8,37 @@
     tools:context=".TriviaFragment">
 
     <TextView
+        android:id="@+id/txtBarraSuperior"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#63B6C1"
+        android:drawableLeft="@drawable/party"
+        android:fontFamily="@font/farro_bold"
+        android:paddingLeft="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="   LogoTrivia"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
         android:id="@+id/txtSaludo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:text="Hola, "
+        android:fontFamily="@font/farro_medium"
+        android:gravity="center"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007" />
+        app:layout_constraintTop_toBottomOf="@+id/txtBarraSuperior"
+        app:layout_constraintVertical_bias="0.104" />
 
     <TextView
         android:id="@+id/txtPregunta"
@@ -26,14 +46,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="¿A qué logo pertenece la imagen?"
+        android:fontFamily="@font/farro"
+        android:gravity="center"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/imgLogoWsp"
         app:layout_constraintStart_toStartOf="@+id/imgLogoWsp"
         app:layout_constraintTop_toBottomOf="@+id/imgLogoWsp" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="216dp"
+        android:layout_height="191dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="@+id/txtPregunta"
         app:layout_constraintStart_toStartOf="@+id/txtPregunta"
@@ -43,24 +66,28 @@
             android:id="@+id/opcionFb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/farro"
             android:text="Pertenece a Facebook" />
 
         <RadioButton
             android:id="@+id/opcionTwt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/farro"
             android:text="Pertenece a Twitter" />
 
         <RadioButton
             android:id="@+id/opcionWsp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/farro"
             android:text="Pertenece a WhatsApp" />
 
         <RadioButton
             android:id="@+id/opcionInsta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/farro"
             android:text="Pertenece a Instagram" />
     </RadioGroup>
 
@@ -70,6 +97,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Enviar"
+        android:backgroundTint="#63B6C1"
+        android:fontFamily="@font/farro"
+        android:padding="13dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:cornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="@+id/radioGroup"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="@+id/radioGroup"
