@@ -8,7 +8,7 @@
     tools:context=".TriviaFragment">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtSaludo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
@@ -25,52 +25,52 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintEnd_toEndOf="@+id/imgLogoWsp"
+        app:layout_constraintStart_toStartOf="@+id/imgLogoWsp"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogoWsp">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/opcionFb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="Pertenece a Facebook" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/opcionTwt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="Pertenece a Twitter" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/opcionWsp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="Pertenece a WhatsApp" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/opcionInsta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="Pertenece a Instagram" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnEnviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
-        android:text="Button"
         app:layout_constraintEnd_toEndOf="@+id/radioGroup"
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="@+id/radioGroup"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgLogoWsp"
         android:layout_width="113dp"
         android:layout_height="113dp"
+        android:layout_marginTop="44dp"
         android:src="@drawable/what"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="151dp" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSaludo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
