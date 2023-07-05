@@ -21,26 +21,14 @@
         <action
             android:id="@+id/action_triviaFragment_to_errorFragment"
             app:destination="@id/errorFragment" />
-        <action
-            android:id="@+id/action_triviaFragment_to_congratsFragment"
-            app:destination="@id/congratsFragment" />
     </fragment>
     <fragment
         android:id="@+id/errorFragment"
-        android:name="cl.individual.triviaapp.ErrorFragment"
+        android:name="cl.individual.triviaapp.ResultadoFragment"
         android:label="fragment_error"
-        tools:layout="@layout/fragment_error" >
+        tools:layout="@layout/fragment_resultado" >
         <action
             android:id="@+id/action_errorFragment_to_triviaFragment"
-            app:destination="@id/triviaFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/congratsFragment"
-        android:name="cl.individual.triviaapp.CongratsFragment"
-        android:label="fragment_congrats"
-        tools:layout="@layout/fragment_congrats" >
-        <action
-            android:id="@+id/action_congratsFragment_to_triviaFragment"
             app:destination="@id/triviaFragment" />
     </fragment>
 </navigation>

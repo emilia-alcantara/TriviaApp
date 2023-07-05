@@ -8,15 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import cl.individual.triviaapp.databinding.FragmentErrorBinding;
+import cl.individual.triviaapp.databinding.FragmentResultadoBinding;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ErrorFragment#newInstance} factory method to
+ * Use the {@link ResultadoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ErrorFragment extends Fragment {
-    private FragmentErrorBinding binding;
+public class ResultadoFragment extends Fragment {
+    private FragmentResultadoBinding binding;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +27,7 @@ public class ErrorFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ErrorFragment() {
+    public ResultadoFragment() {
         // Required empty public constructor
     }
 
@@ -40,8 +40,8 @@ public class ErrorFragment extends Fragment {
      * @return A new instance of fragment ErrorFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ErrorFragment newInstance(String param1, String param2) {
-        ErrorFragment fragment = new ErrorFragment();
+    public static ResultadoFragment newInstance(String param1, String param2) {
+        ResultadoFragment fragment = new ResultadoFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,7 +61,7 @@ public class ErrorFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentErrorBinding.inflate(getLayoutInflater(), container, false);
+        binding = FragmentResultadoBinding.inflate(getLayoutInflater(), container, false);
         initListeners();
         return binding.getRoot();
     }
