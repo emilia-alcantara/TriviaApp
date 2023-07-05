@@ -8,7 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import cl.individual.triviaapp.databinding.FragmentFirstBinding;
+import cl.individual.triviaapp.databinding.FragmentBienvenidaBinding;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,7 +17,7 @@ import cl.individual.triviaapp.databinding.FragmentFirstBinding;
  * create an instance of this fragment.
  */
 public class BienvenidaFragment extends Fragment {
-    private FragmentFirstBinding binding;
+    private FragmentBienvenidaBinding binding;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,7 +62,7 @@ public class BienvenidaFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentFirstBinding.inflate(getLayoutInflater(), container, false);
+        binding = FragmentBienvenidaBinding.inflate(getLayoutInflater(), container, false);
         initListeners();
 
         return binding.getRoot();

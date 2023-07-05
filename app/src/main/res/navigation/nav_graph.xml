@@ -3,11 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/firstFragment">
-
+    app:startDestination="@id/bienvenidaFragment">
     <fragment
-        android:id="@+id/firstFragment"
+        android:id="@+id/bienvenidaFragment"
         android:name="cl.individual.triviaapp.BienvenidaFragment"
-        android:label="fragment_first"
-        tools:layout="@layout/fragment_first" />
+        android:label="fragment_bienvenida"
+        tools:layout="@layout/fragment_bienvenida" >
+        <action
+            android:id="@+id/action_bienvenidaFragment_to_triviaFragment"
+            app:destination="@id/triviaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/triviaFragment"
+        android:name="cl.individual.triviaapp.TriviaFragment"
+        android:label="fragment_trivia"
+        tools:layout="@layout/fragment_trivia" >
+        <action
+            android:id="@+id/action_triviaFragment_to_errorFragment"
+            app:destination="@id/errorFragment" />
+        <action
+            android:id="@+id/action_triviaFragment_to_congratsFragment"
+            app:destination="@id/congratsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/errorFragment"
+        android:name="cl.individual.triviaapp.ErrorFragment"
+        android:label="fragment_error"
+        tools:layout="@layout/fragment_error" >
+        <action
+            android:id="@+id/action_errorFragment_to_triviaFragment"
+            app:destination="@id/triviaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/congratsFragment"
+        android:name="cl.individual.triviaapp.CongratsFragment"
+        android:label="fragment_congrats"
+        tools:layout="@layout/fragment_congrats" >
+        <action
+            android:id="@+id/action_congratsFragment_to_triviaFragment"
+            app:destination="@id/triviaFragment" />
+    </fragment>
 </navigation>
