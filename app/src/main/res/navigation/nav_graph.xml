@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/firstFragment"
-        android:name="cl.individual.triviaapp.FirstFragment"
+        android:name="cl.individual.triviaapp.BienvenidaFragment"
         android:label="fragment_first"
         tools:layout="@layout/fragment_first" />
 </navigation>

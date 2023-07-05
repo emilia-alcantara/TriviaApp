@@ -8,15 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import cl.individual.triviaapp.databinding.FragmentFirstBinding;
-
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FirstFragment#newInstance} factory method to
+ * Use the {@link ErrorFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FirstFragment extends Fragment {
-    private FragmentFirstBinding binding;
+public class ErrorFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +24,7 @@ public class FirstFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FirstFragment() {
+    public ErrorFragment() {
         // Required empty public constructor
     }
 
@@ -37,11 +34,11 @@ public class FirstFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FirstFragment.
+     * @return A new instance of fragment ErrorFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static FirstFragment newInstance(String param1, String param2) {
-        FirstFragment fragment = new FirstFragment();
+    public static ErrorFragment newInstance(String param1, String param2) {
+        ErrorFragment fragment = new ErrorFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,13 +58,7 @@ public class FirstFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentFirstBinding.inflate(getLayoutInflater(), container, false);
-        initListeners();
-
-        return binding.getRoot();
-    }
-
-    private void initListeners() {
-
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_error, container, false);
     }
 }
