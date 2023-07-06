@@ -28,11 +28,12 @@
 
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="289dp"
-        android:layout_height="64dp"
+        android:id="@+id/txtMensajeResultado"
+        android:layout_width="288dp"
+        android:layout_height="95dp"
         android:gravity="center"
         android:text="mensaje"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,17 +44,17 @@
         android:id="@+id/btnNuevoIntento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Inténtalo otra vez"
+        android:layout_marginTop="128dp"
         android:backgroundTint="#63B6C1"
         android:fontFamily="@font/farro"
         android:padding="13dp"
+        android:text="Inténtalo otra vez"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:cornerRadius="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.475"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="@+id/txtMensajeResultado"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/txtMensajeResultado"
+        app:layout_constraintTop_toBottomOf="@+id/txtMensajeResultado" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

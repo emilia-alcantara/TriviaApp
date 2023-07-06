@@ -3,6 +3,7 @@ package cl.individual.triviaapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +27,7 @@ public class ResultadoFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
 
     public ResultadoFragment() {
         // Required empty public constructor
@@ -63,10 +65,30 @@ public class ResultadoFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentResultadoBinding.inflate(getLayoutInflater(), container, false);
         initListeners();
+        mostrarMensajeResultado();
         return binding.getRoot();
     }
 
-    private void initListeners() {
+    private void mostrarMensajeResultado() {
+        int opcionId = getArguments().getInt("opcion seleccionada");
+        int opcionCorrecta = getArguments().getInt("opcion correcta");
+        String nombre = getArguments().getString("nombre usuario");
 
+
+        if (opcionId == opcionCorrecta) {
+            binding.txtMensajeResultado.setText("Genial " + nombre + " acertaste!" );
+        } else {
+            binding.txtMensajeResultado.setText("Oh no " + nombre + ", te equivocaste :(\n Inténtalo de nuevo" );
+        }
+
+    }
+
+    private void initListeners() {
+        binding.btnNuevoIntento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(binding.getRoot()).navigate(R.id.action_resultadoFragment_to_triviaFragment);
+            }
+        });
     }
 }

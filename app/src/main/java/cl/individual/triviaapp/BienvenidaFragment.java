@@ -3,6 +3,7 @@ package cl.individual.triviaapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -68,7 +69,16 @@ public class BienvenidaFragment extends Fragment {
         return binding.getRoot();
     }
 
-    private void initListeners() {
 
+    private void initListeners() {
+        binding.btnComenzar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nombre = binding.editTxtNombre.getText().toString();
+                Bundle bundleNombre = new Bundle();
+                bundleNombre.putString("nombre ingresado", nombre);
+                Navigation.findNavController(binding.getRoot()).navigate(R.id.action_bienvenidaFragment_to_triviaFragment,bundleNombre);
+            }
+        });
     }
 }

@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imgLogoWsp" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/trivia1"
         android:layout_width="216dp"
         android:layout_height="191dp"
         android:layout_marginTop="24dp"
@@ -103,10 +103,10 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:cornerRadius="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="@+id/trivia1"
         app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintStart_toStartOf="@+id/trivia1"
+        app:layout_constraintTop_toBottomOf="@+id/trivia1" />
 
     <ImageView
         android:id="@+id/imgLogoWsp"

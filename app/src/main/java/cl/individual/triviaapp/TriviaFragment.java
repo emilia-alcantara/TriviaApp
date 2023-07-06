@@ -3,10 +3,12 @@ package cl.individual.triviaapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import cl.individual.triviaapp.databinding.FragmentTriviaBinding;
 
@@ -53,7 +55,7 @@ public class TriviaFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam1 = getArguments().getString("nombre ingresado");
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
@@ -63,10 +65,36 @@ public class TriviaFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentTriviaBinding.inflate(getLayoutInflater(), container, false);
         initListeners();
-        return binding.getRoot();
+        mostrarBienvenida();
+                return binding.getRoot();
+    }
+
+
+
+
+    private void mostrarBienvenida() {
+        binding.txtSaludo.setText("Hola, " + mParam1 + "!");
     }
 
     private void initListeners() {
+        binding.btnEnviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int opcionId = binding.trivia1.getCheckedRadioButtonId();
 
+                Bundle resultBundle = new Bundle();
+                int opSeleccionada = binding.trivia1.getCheckedRadioButtonId();
+                int opCorrecta = binding.opcionWsp.getId();
+                resultBundle.putInt("opcion seleccionada", opSeleccionada);
+                resultBundle.putInt("opcion correcta", opCorrecta);
+                resultBundle.putString("nombre usuario", mParam1);
+
+                if (opcionId == -1) {
+                    Toast.makeText(getContext(), "ATENCION! Debes seleccionar una opción", Toast.LENGTH_LONG).show();
+                } else {
+                    Navigation.findNavController(binding.getRoot()).navigate(R.id.action_triviaFragment_to_resultadoFragment, resultBundle);
+                }
+            }
+        });
     }
 }

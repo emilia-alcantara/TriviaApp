@@ -19,16 +19,16 @@
         android:label="fragment_trivia"
         tools:layout="@layout/fragment_trivia" >
         <action
-            android:id="@+id/action_triviaFragment_to_errorFragment"
-            app:destination="@id/errorFragment" />
+            android:id="@+id/action_triviaFragment_to_resultadoFragment"
+            app:destination="@id/resultadoFragment" />
     </fragment>
     <fragment
-        android:id="@+id/errorFragment"
+        android:id="@+id/resultadoFragment"
         android:name="cl.individual.triviaapp.ResultadoFragment"
-        android:label="fragment_error"
+        android:label="fragment_resultado"
         tools:layout="@layout/fragment_resultado" >
         <action
-            android:id="@+id/action_errorFragment_to_triviaFragment"
+            android:id="@+id/action_resultadoFragment_to_triviaFragment"
             app:destination="@id/triviaFragment" />
     </fragment>
 </navigation>
