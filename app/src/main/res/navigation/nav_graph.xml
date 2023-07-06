@@ -28,7 +28,7 @@
         android:label="fragment_resultado"
         tools:layout="@layout/fragment_resultado" >
         <action
-            android:id="@+id/action_resultadoFragment_to_triviaFragment"
-            app:destination="@id/triviaFragment" />
+            android:id="@+id/action_resultadoFragment_to_bienvenidaFragment"
+            app:destination="@id/bienvenidaFragment" />
     </fragment>
 </navigation>

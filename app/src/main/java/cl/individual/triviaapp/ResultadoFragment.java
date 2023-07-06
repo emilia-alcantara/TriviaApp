@@ -87,7 +87,7 @@ public class ResultadoFragment extends Fragment {
         binding.btnNuevoIntento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(binding.getRoot()).navigate(R.id.action_resultadoFragment_to_triviaFragment);
+                Navigation.findNavController(binding.getRoot()).navigate(R.id.action_resultadoFragment_to_bienvenidaFragment);
             }
         });
     }
